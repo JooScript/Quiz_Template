@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <header>
+          <h1 id="title"></h1>
+          <p id="description"></p>
+        </header>
+
+        <div class="progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="fill"></div>
+          </div>
+          <div class="progress-text" id="progressText"></div>
+        </div>
+      </div>
+
+      <section class="result" id="result" hidden aria-live="polite">
+        <div class="ring">
+          <svg
+            viewBox="0 0 120 120"
+            width="140"
+            height="140"
+            aria-hidden="true"
+          >
+            <circle class="bg" cx="60" cy="60" r="52"></circle>
+            <circle class="fg" id="ringFill" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="ring-text" id="ringText">0%</div>
+        </div>
+        <div class="score" id="score"></div>
+        <div class="verdict" id="verdict"></div>
+        <div class="counts" id="counts"></div>
+      </section>
+
+      <div id="quiz"></div>
+
+      <div class="warn" id="warn" role="alert"></div>
+      <div class="actions">
+        <button id="endBtn">End Quiz</button>
+        <button id="restartBtn" class="secondary" hidden>Try Again</button>
+      </div>
+    </main>
+  </body>
+</html>
