@@ -537,7 +537,7 @@ function endQuiz() {
   });
 
   const total = questions.length;
-  const passMark = questions.length / 2;
+  const passMark = QUIZ.questions.length / 2;
   const pct = total ? Math.round((correctCount / total) * 100) : 0;
   const pass = pct >= passMark;
 
