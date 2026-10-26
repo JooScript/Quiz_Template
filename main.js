@@ -537,9 +537,8 @@ function endQuiz() {
   });
 
   const total = questions.length;
-  const passMark = QUIZ.questions.length / 2;
   const pct = total ? Math.round((correctCount / total) * 100) : 0;
-  const pass = pct >= passMark;
+  const pass = pct >= 50;
 
   setTimeout(
     () => {
